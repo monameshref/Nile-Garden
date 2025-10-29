@@ -1,0 +1,11 @@
+
+
+@media (max-width: 991px) {
+    .row-banner .caption .dog-house {
+        display: none;
+    }
+}
+
+/* @media (max-width: 575px) {
+
+} */
