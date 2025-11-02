@@ -57,6 +57,18 @@ button:hover {
 .card {
     padding: 15px;
     transition: .5s;
+    position: relative;
+    width: 100%;
+}
+.new-offer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #29E845;
+    color: var(--color-White);
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 0 10px 0 10px;
 }
 .card:hover {
     border: 1px solid var(--color-yellow);
@@ -110,3 +122,15 @@ button:hover {
     border: 1px solid var(--color-blue);
 }
 
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    padding-block: 50px;
+}
+.main-title h2 {
+    color: var(--color-blue);
+}

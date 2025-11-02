@@ -1,0 +1,81 @@
+/*! *************** Navbar *************** */
+/* nav .menu {
+    display: none;
+} */
+
+nav .top-bar {
+    background-color: #5C3FCF;
+    color: var(--color-White);
+    padding-block: 10px;
+}
+nav .top-bar .dropdown a {
+    color: var(--color-White);
+}
+nav .top-bar .dropdown-menu a {
+    color: #000;
+    text-align: right;
+}
+nav .middle-bar .logo img {
+    width: 80px;
+}
+nav .middle-bar form {
+    width: 500px;
+    margin: auto;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    position: relative;
+}
+nav .middle-bar form input {
+    width: 100%;
+    background-color: transparent;
+    padding: 15px;
+}
+nav .middle-bar form span {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    background-color: var(--color-blue);
+    color: var(--color-White);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+nav .middle-bar ul {
+    width: 350px;
+    padding: 0;
+    gap: 15px;
+}
+nav .bottom-bar {
+    border: 1px solid;
+    border-color: #ddd transparent #ddd transparent;
+}
+nav .bottom-bar .container ul {
+    width: 100% !important;
+    padding: 0;
+    flex-wrap: wrap;
+}
+nav .bottom-bar a,
+nav .bottom-bar button {
+    color: #000 !important;
+    transition: .3s;
+}
+nav .bottom-bar a:hover:hover,
+nav .bottom-bar .dropdown button:hover {
+    color: var(--color-blue) !important;
+}
+nav .bottom-bar .dropdown button {
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+nav .bottom-bar .dropdown button:hover {
+    color: #000;
+    background-color: transparent;
+    border: none;
+    transform: scale(1);
+    box-shadow: none;
+}

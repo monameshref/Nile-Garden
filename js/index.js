@@ -1,7 +1,33 @@
 //! AOS library
 AOS.init();
 
+//! Owl library
+$(document).ready(function(){
+    $(".owl-carousel.banner").owlCarousel({
+        loop:true,
+        items:1,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        dots:true,
+        nav: false,
+        // stagePadding: 150,
+        rtl: true
+    });
+});
 
+$(document).ready(function(){
+    $(".owl-carousel.our-customers").owlCarousel({
+        loop:true,
+        items:1,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        dots: false,
+        nav: true,
+        rtl: true,
+    });
+});
 
 
 //! GSAP library (Overlay)
@@ -56,54 +82,10 @@ cards.forEach(card => {
 });
 
 
+//! Navbar
+    const menuBtn = document.querySelector('.menu i');
+    const bottomBar = document.querySelector('.bottom-bar');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const cards = document.querySelectorAll('.image');
-
-// cards.forEach(card => {
-//     const overlay = card.querySelector('.overlay');
-
-//     card.addEventListener('mouseenter', (e) => {
-//         const direction = getDirection(e, card);
-//         overlay.classList.remove('from-top', 'from-bottom', 'from-left', 'from-right');
-//         overlay.classList.add(direction);
-//     });
-
-//     card.addEventListener('mouseleave', (e) => {
-//         const direction = getDirection(e, card);
-//         overlay.classList.remove('from-top', 'from-bottom', 'from-left', 'from-right');
-//         overlay.classList.add(direction);
-//     });
-// });
-
-// function getDirection(e, element) {
-//     const rect = element.getBoundingClientRect();
-//     const x = e.clientX - rect.left - rect.width / 2;
-//     const y = e.clientY - rect.top - rect.height / 2;
-//     const angle = Math.atan2(y, x) * (180 / Math.PI);
-//     const directions = ['from-right', 'from-bottom', 'from-left', 'from-top'];
-//     const index = Math.round(((angle + 180) / 90) + 3) % 4;
-//     return directions[index];
-// }
+    menuBtn.addEventListener('click', () => {
+        bottomBar.classList.toggle('show-menu');
+    });

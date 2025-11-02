@@ -1,0 +1,384 @@
+
+/*! Section Train */
+.row-train {
+    color: #fff;
+    padding: 80px 20px;
+    padding-bottom: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0a8d0a;
+    /* animation: move-gradient 6s linear infinite; */
+}
+.container.train {
+    overflow: hidden;
+    position: relative;
+}
+.container.train::before {
+    content: "";
+    width: 2000px;
+    height: 20px;
+    background-image: url("../assets/images/Frame.svg");
+    background-position: 0 0;
+    position: absolute;
+    left: -67%;
+    transform: rotate(139deg) translateX(0);
+    animation: bg-train2 20s linear infinite;
+}
+
+@keyframes bg-train {
+    0% {
+        transform: rotate(139deg) translateX(0);
+    }
+    50% {
+        transform: rotate(139deg) translateX(-100px);
+    }
+    100% {
+        transform: rotate(139deg) translateX(-200px);
+    }
+}
+@keyframes bg-train2 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}
+
+
+
+
+@keyframes move-gradient {
+    0% {
+        background-position: 0 0; 
+    }
+    33% {
+        background-position: 400px 0;
+    }
+    66% {
+        background-position: 400px 0;
+    }
+    100% {
+        background-position: 0 0; 
+    }
+}
+
+
+.row-train .images {
+    position: relative;
+    width: 615px;
+    display: block;
+    height: 100%;
+}
+
+.row-train .tow-container {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    width: 440px;
+    overflow: hidden;
+    height: 200px;
+}
+
+
+.row-train .tow-container::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -20px;
+    width: 30px ;
+    height: 60px;
+    transform: rotate(16deg);
+    background-color: #0a8d0a;
+
+}
+.row-train .tow-bars { /* قضبان القطر */
+    width: 200%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: slide 4s linear infinite;
+}
+
+.row-train .images .towing-station { /* محطة القطر */
+    position: absolute;
+    right: -100px;
+    bottom: 35px;
+    transform: translateX(70px);
+    z-index: 0;
+    animation: show-station 4s linear infinite;
+}
+
+.row-train .images .train {
+    position: absolute;
+    left: -90%;
+    bottom: 5px;
+    z-index: 5;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    70% {
+        transform: translateX(-400px);
+    }
+    100% {
+        transform: translateX(-400px);
+    }
+}
+
+@keyframes move-station {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translateX(-400px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-400px);
+        opacity: 1;
+    }
+}
+ /* ********************************** */
+
+
+
+
+
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50%, 70% {
+        transform: translateX(-230px);
+    }
+    100% {
+        transform: translateX(-400px);
+    }
+}
+
+
+@keyframes show-station {
+    0% {
+        transform: translateX(0);
+    }
+    50%, 70% {
+        transform: translateX(-280px);
+    }
+    100% {
+        transform: translateX(-460px);
+    }
+}
+
+/* .green-track {
+    padding: 0;
+    position: relative;
+    transform: rotate(140deg);
+    left: -75%;
+    top: -55px;
+    animation: fade-move 4s ease-in-out infinite;
+}
+
+@keyframes fade-move {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} */
+
+
+
+
+
+.lamp-container {
+    position: relative;
+    display: inline-block;
+}
+
+.lamp {
+    width: 300px;
+    display: block;
+}
+
+.light {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 86%;
+    right: 45%;;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background: radial-gradient(circle, #fff7b1 0%, #ffeb3b 40%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0;
+        filter: brightness(1);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(2);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* join-panner */
+.main-container {
+    width: 90%;
+    margin: auto;
+}
+.m-section {
+    margin: 100px 0;
+}
+
+.join-panner {
+    background: linear-gradient(0deg, #98cecc 0%, rgba(36, 161, 156, 0.13) 100%);
+    min-height: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.panner-slogen {
+    height: 125px;
+    width: 180px;
+}
+.panner-tree img,
+.panner-slogen img {
+    width: 100%;
+    height: 100%;
+}
+
+.panner-tree img{
+    height: 26%;
+}
+.panner-tree {
+    height: 275px;
+    align-content: end;
+    position: relative;
+}
+
+.man-tree{
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    bottom: 15px;
+    left: 13%;
+    transform: translateX(-20%);
+    align-content: end;
+}
+
+.man-tree img{
+    height: 80%;
+}
+.panner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.water {
+    position: absolute;
+    right: -33px;
+    width: 70px;
+    height: 40px;
+    top: 57%;
+    transform: translateY(50%);
+    animation:  drink-tree infinite;
+    animation-duration: 2s;
+
+}
+
+.water img{
+    width: 100%;
+    height: 100%;
+}
+.panner-text p {
+    color: #000;
+    font-size: 20px;
+}
+
+.panner-text a {
+    width: 130px;
+    font-size: 18px;
+}
+
+.sub-title {
+    font-size: 45px;
+    color: #7FDEDA;
+    text-shadow: 2px -2px 0 #24a19c;
+}
+.main_btn {
+    min-width: 120px;
+    height: 45px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #24a19c;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 33px;
+}
+
+/*! *************** Animation Panner Tree *************** */
+.join-panner .panner-tree figure {
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.join-panner .panner-tree figure::before {
+    content: "";
+    width: 30%;
+    height: 1000px;
+    position: absolute;
+    background-image: url("../assets/images/tree-money.svg");
+    background-size: contain;
+    background-repeat: repeat;
+    top: 55px;
+    right: 50px;
+    animation: treeBounce 14s infinite linear;
+    z-index: -1;
+}
+@keyframes treeBounce {
+    0% {
+        background-position-y: 0;
+}
+    100% {
+        background-position-y: 1000px;
+    }
+}
